@@ -4,7 +4,7 @@
 	<title>Home page</title>
 </head>
 <body>
-	<a href="{{route('home.index')}}">Back</a> |
+	<a href="{{route('admin.index')}}">Back</a> |
 	<a href="/logout">logout</a>
 	<br>
 
@@ -25,23 +25,19 @@
 				</tr>
 				<tr>
 					<td>Name</td>
-					<td><input type="text" name="name" value="{{old('name')}}"></td>
+					<td><input type="text" name="fullname" value="{{old('fullname')}}"></td>
 				</tr>
 				<tr>
-					<td>Cgpa</td>
-					<td><input type="text" name="cgpa" value="{{old('cgpa')}}"></td>
+					<td>Company</td>
+					<td><input type="text" name="company" value="{{old('company')}}"></td>
 				</tr>
 				<tr>
-					<td>dept</td>
-					<td><input type="text" name="dept" value="{{old('dept')}}"></td>
+					<td>contact</td>
+					<td><input type="text" name="contact" value="{{old('contact')}}"></td>
 				</tr>
 				<tr>
 					<td>type</td>
 					<td><input type="text" name="type" value="{{old('type')}}"></td>
-				</tr>
-				<tr>
-					<td>Photo</td>
-					<td><input type="file" name="myimg"></td>
 				</tr>
 				<tr>
 					<td></td>

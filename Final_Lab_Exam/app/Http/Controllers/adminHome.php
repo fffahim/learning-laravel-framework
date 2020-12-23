@@ -36,4 +36,25 @@ class adminHome extends Controller
               ->update(['fullname' => $info->fullname , 'company'=> $info->company, 'contact'=> $info->contact,'username'=> $info->username]);
         return redirect()->route('admin.userlist');
     }
+    public function delete($id){
+    	
+    	$affected= DB::table('user')->where('id',$id)->delete();
+    	return redirect()->route('admin.userlist');
+    }
+    public function create(){
+    
+    	return view('admin.create');
+    }
+    public function store(Request $req,infoCheck $info)
+    {
+    	$affected= DB::table('user')->insert([
+    		'fullname'=> $req->fullname,
+    		'username'=> $req->username,
+    		'password'=> $req->password,
+    		'contact'=> $req->contact,
+    		'company'=> $req->company,
+    		'type'=> $req->type
+    	]);
+    	return redirect()->route('admin.userlist');
+    }
 }

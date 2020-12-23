@@ -21,7 +21,7 @@ Route::get('/', function () {
  
  Route::group(['middleware'=>['checksession']],function(){
  	Route::get('/home','homeController@index');
- 	Route::get('/adminhome','adminHome@index');
+ 	Route::get('/adminhome','adminHome@index')->name('admin.index');
  	Route::get('/edit/{id}', 'adminHome@edit')->name('admin.edit');
 	Route::post('/edit/{id}', 'adminHome@update');
  	Route::get('/userlist','adminHome@userlist')->name('admin.userlist');

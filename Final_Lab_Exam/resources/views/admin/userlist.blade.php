@@ -26,7 +26,6 @@
 				<td>{{$userlist[$i]->username}}</td>
 				<td>
 					<a href="{{route('admin.edit', $userlist[$i]->id)}}">Edit </a> |
-					<a href="{{route('admin.show', $userlist[$i]->id)}}">Details </a> |
 					<a href="/delete/{{$userlist[$i]->id}}">Delete </a> 
 				</td>
 			</tr>
